@@ -22,5 +22,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('/teachers/search', [TeacherController::class, 'search']);
 
-// Tìm kiếm khoá học với bộ lọc
-Route::get('/courses', 'CourseController@searchCourses');
+Route::get('/courses/searchByPrice', 'App\Http\Controllers\CourseController@searchByPriceRange')->name('api.courses.searchByPrice');

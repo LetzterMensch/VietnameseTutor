@@ -17,3 +17,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/teachers/search', 'App\Http\Controllers\TeacherController@search');
+Route::get('/courses/searchByPrice', 'CourseController@searchByPriceRange')->name('courses.searchByPrice');
+Route::get('/courses', 'CoursesController@index')->name('courses.index');
