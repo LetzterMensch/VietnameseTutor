@@ -8,8 +8,8 @@ function Hero() {
   return (
     <div className={classes}>
       <div className="hero-body text-center text-black">
-        <h1>Premium Property Finder</h1>
-        <p className="mb-0">Bringing premium property right to your fingertips</p>
+        <h1>IchiIchiSensei.</h1>
+        <p className="mb-0">ベトナム語を勉強しよう</p>
       </div>
     </div>
   )
