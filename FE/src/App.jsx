@@ -5,7 +5,7 @@ import './App.css';
 const SearchFormDemo = () => {
   return (
     <div className="SearchFormDemo">
-      <h1>Search for Teachers and Courses</h1>
+      <h1>講師とコース</h1>
       <SearchForm />
     </div>
   );
