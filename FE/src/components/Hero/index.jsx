@@ -4,7 +4,7 @@ import styles from './styles.module.css'
 import classnames from 'classnames'
 
 function Hero() {
-  const classes = classnames('hero', 'hero-lg', 'mb-3', styles.hero)
+  const classes = classnames('hero', 'hero-lg', 'mb-3','h-75 d-inline-block w-100 p-3', styles.hero)
   return (
     <div className={classes}>
       <div className="hero-body text-center text-black">
