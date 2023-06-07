@@ -13,15 +13,15 @@ const Navbar = () => {
   return (
     <>
       <Nav>
-        {/* <Bars /> */}
+        <Bars />
         <NavMenu>
           <NavLink to="/">
             <h4>IchiSensei.</h4>
           </NavLink>
-          <NavLink to="/about">スケジュール</NavLink>
-          <NavLink to="/events">私の学び</NavLink>
-          <NavLink to="/annual">教師になる</NavLink>
-          <NavLink to="/team">Ichisenseiについて</NavLink>
+          <NavLink to="/schedule">スケジュール</NavLink>
+          <NavLink to="/my_course">私の学び</NavLink>
+          <NavLink to="/become_teacher">教師になる</NavLink>
+          <NavLink to="/about">Ichisenseiについて</NavLink>
           {/* Second Nav */}
           {/* <NavBtnLink to='/sign-in'>Sign In</NavBtnLink> */}
         </NavMenu>

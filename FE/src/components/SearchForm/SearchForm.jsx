@@ -56,7 +56,7 @@ const SearchForm = () => {
         onChange={(e) => setLevelFilter(e.target.value)}
         className="search-input"
       />
-      <input type="number" name="myInput" placeholder="Số năm kinh nghiệm " step="1" value="0" min="1" max="100" required
+      <input type="number" name="myInput" placeholder="Số năm kinh nghiệm " step="1"  min="1" max="100" required
         // eslint-disable-next-line react/jsx-no-duplicate-props
         value={experienceFilter}
         onChange={(e) => setExperienceFilter(e.target.value)}
