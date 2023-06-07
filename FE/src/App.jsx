@@ -8,6 +8,7 @@ import Navbar from "./components/NavigationBar/NavBar";
 import SearchForm from "./components/SearchForm/SearchForm";
 import Filter from "./components/Filter/Filter";
 import { CoursesProvider, CoursesConsumer } from "./context/CoursesProvider";
+import FuncList from "./components/Functionalities/FuncList";
 
 function Home() {
   return (
@@ -26,13 +27,29 @@ function Home() {
               return (
                 <div className="columns">
                   {propertyListings.map((listing) => (
-                    <Listing key = {listing.id} listing={listing} />
+                    <Listing key={listing.id} listing={listing} />
                   ))}
                 </div>
               );
             }}
           </CoursesConsumer>
         </CoursesProvider>
+      </div>
+      <div className="fw-bold fs-2 text-black px-5 mx-5">勉強しましょう！</div>
+      <div className="table px-5 mx-5">
+        <tr>
+          <FuncList
+            name="スケジュール"
+            description=""
+            img="src\assets\schedule.jpg"
+          />
+          <FuncList name="コース" description="" img="src\assets\course.png" />
+          <FuncList
+            name="クレジットカード"
+            description=""
+            img="src\assets\credit-card.png"
+          />
+        </tr>
       </div>
     </Router>
   );
