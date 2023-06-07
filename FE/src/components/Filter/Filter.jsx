@@ -11,7 +11,6 @@ function Filter() {
   const expYears = {name:"経験年数",value:["1-3", "3-5", ">5"]};
   const genders = {name : "教師",value:["男性", "女性"]};
   const prices = {name:"値段", value:["<50万VND", "50万-200万VND", ">200万VND"]};
-
   return (
     <Nav>
       <Bars />

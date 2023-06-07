@@ -4,10 +4,13 @@ import Hero from "./components/Hero";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Listing from "./components/Listing/Listing";
+import TeacherListing from "./components/Listing/TeacherListing";
 import Navbar from "./components/NavigationBar/NavBar";
 import SearchForm from "./components/SearchForm/SearchForm";
 import Filter from "./components/Filter/Filter";
 import { CoursesProvider, CoursesConsumer } from "./context/CoursesProvider";
+import { TeachersProvider, TeachersConsumer } from "./context/TeachersProvider";
+
 import FuncList from "./components/Functionalities/FuncList";
 
 function Home() {
@@ -50,6 +53,23 @@ function Home() {
             img="src\assets\credit-card.png"
           />
         </tr>
+      </div>
+      <div className="fw-bold fs-2 text-black px-5 mx-5">ichisenseiの教師</div>
+      <div className="container">
+        <TeachersProvider>
+          <TeachersConsumer>
+            {function (value) {
+              const { propertyListings } = value;
+              return (
+                <div className="columns">
+                  {propertyListings.map((listing) => (
+                    <TeacherListing key={listing.id} listing={listing} />
+                  ))}
+                </div>
+              );
+            }}
+          </TeachersConsumer>
+        </TeachersProvider>
       </div>
     </Router>
   );
