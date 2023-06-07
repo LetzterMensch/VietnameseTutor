@@ -2,7 +2,6 @@
 import * as React from "react";
 import Hero from "./components/Hero";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
 import Listing from "./components/Listing/Listing";
 import TeacherListing from "./components/Listing/TeacherListing";
 import Navbar from "./components/NavigationBar/NavBar";
@@ -22,22 +21,7 @@ function Home() {
         君に理想の先生探しを始めよう！
       </div>
       <Filter />
-      <div className="container">
-        <CoursesProvider>
-          <CoursesConsumer>
-            {function (value) {
-              const { propertyListings } = value;
-              return (
-                <div className="columns">
-                  {propertyListings.map((listing) => (
-                    <Listing key={listing.id} listing={listing} />
-                  ))}
-                </div>
-              );
-            }}
-          </CoursesConsumer>
-        </CoursesProvider>
-      </div>
+      
       <div className="fw-bold fs-2 text-black px-5 mx-5">勉強しましょう！</div>
       <div className="table px-5 mx-5">
         <tr>
