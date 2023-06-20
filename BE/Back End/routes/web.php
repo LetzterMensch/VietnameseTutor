@@ -26,7 +26,7 @@ Route::controller(CourseController::class)->group(function () {
     Route::delete('/course/{id}','destroy');
 });
 
-Route::controller(Teacher::class)->group(function () {
+Route::controller(TeacherController::class)->group(function () {
     Route::get('/teacher/{id}', 'show');
     Route::get('/teacher', 'list');
     Route::post('/teacher','create');
